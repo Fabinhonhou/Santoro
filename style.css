@@ -1,0 +1,494 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,200;1,200&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fdf4ef;
+  }
+
+  header {
+    background-color: #fff5f0;
+    padding: 5px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ccc;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  /* Logo levemente à direita */
+  .logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+  }
+  
+  header img {
+    max-width: 120px;
+    padding-top: 5px;
+  }
+  
+  /* Navbar alinha à direita da logo */
+  header nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-right: 40px;
+  }
+  
+  header nav a {
+    position: relative; /* necessário para o ::after */
+    text-decoration: none;
+    color: #640E0E;
+    font-weight: 500; /* corrigido para um só */
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    transition: color 0.9s ease;
+    padding-bottom: 4px; /* espaço para o underline */
+  }
+  
+  header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #640E0E; /* mesma cor do texto */
+    transition: width 0.3s ease 0.06s; /* duração 0.3s, delay 0.5s */
+  }
+  
+  header nav a:hover::after {
+    width: 100%;
+  }
+  
+  
+  
+  .imagem-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .imagem-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* preto com 50% de opacidade */
+  }
+  
+  .conteudo {
+font-family: 'Albert Sans', sans-serif;
+
+background-color: #640E0E;
+padding: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+  }
+  
+ 
+  section.hero div.text p {
+    margin: 10px 0 20px;
+  }
+
+  section.hero div.text button {
+    padding: 10px 20px;
+    background-color: #a52a2a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  section.hero img {
+    max-width: 300px;
+    border-radius: 15px;
+  }
+
+  section.motto {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff5f0;
+  }
+
+  section.motto blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 20px 0;
+  }
+
+  section.about {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #f8f0e8;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  section.about img {
+    max-width: 600px;
+    border-radius: 5px;
+    margin-top: -85px;
+  }
+
+  section.about div.text {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: larger;
+    max-width: 550px;
+
+  }
+
+  section.about div.text h2 {
+    font-family: 'Albert Sans', sans-serif;
+    color: #a52a2a;
+    margin-top: -60px;
+  }
+
+  #contato {
+    padding: 60px 20px;
+    background-color: #fff5f0;
+  }
+  
+  .contato-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .contato-texto {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .contato-texto p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .form-container {
+    flex: 1;
+    max-width: 600px;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  
+    /* Importante: faz o formulário invadir a seção acima */
+    margin-top: -145px;
+  
+    margin-left: auto;
+    margin-right: 40px;
+    z-index: 10;
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    color: #640e0e;
+    margin-bottom: 20px;
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .form-container button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #640e0e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal; 
+  }
+  
+  .form-container button:hover {
+    background-color: #a31e1e;
+  }
+  
+  /* Texto à esquerda do formulário */
+  #contato .contato-flex {
+    display: flex;
+  }
+  
+  #contato .contato-texto {
+    flex: 1;
+    padding-right: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  #contato .contato-texto p {
+    font-family: 'Albert Sans', sans-serif;
+    font-size:  30px;
+    margin: 0;
+    text-align: justify;
+    text-align: right;
+  }
+
+  /* Variáveis CSS */
+:root {
+  --burgundy: #8b0000;
+  --burgundy-light: #a0252f;
+  --cream: #000000;
+  --cream-dark: #0000;
+  --gold: #8C1616;
+  --charcoal: #E1ddd4;
+}
+
+/* Footer Principal */
+.footer {
+  background-color: var(--charcoal);
+  color: white;
+  padding: 46px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+/* Colunas do Footer */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+.footer-logo {
+  font-family: 'Albert Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 16px;
+  margin-top: -px;
+}
+
+/* Descrição */
+.footer-description {
+   font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+
+  margin-top: -10px;
+  color: #000000;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Redes Sociais */
+.social-links {
+  display: flex;
+  gap: 16px;
+  
+}
+
+.social-link {
+  
+  color: #000000;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Títulos das Seções */
+.footer-title {
+  color: var(--gold);
+  margin-bottom: 13px;
+  font-size: 1.1rem;
+
+    font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Links do Footer */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+   font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #8C1616;
+}
+
+/* Informações de Contato */
+.footer-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+
+   font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-info li {
+  margin-bottom: 8px;
+}
+
+/* Horários */
+.footer-hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  font-size: 0.9rem;
+
+   font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-hours li {
+  margin-bottom: 8px;
+}
+
+/* Copyright */
+.footer-bottom {
+  border-top: 1px solid #000000;
+  padding-top: 32px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #000000;
+  margin: 0;
+
+    font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 0;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    font-size: 1.75rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 12px;
+  }
+  
+  .footer-grid {
+    gap: 20px;
+  }
+  
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+}

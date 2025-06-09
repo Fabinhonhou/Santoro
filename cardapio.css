@@ -1,0 +1,493 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F2EA;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 3rem;
+    }
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff5f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.logo img {
+    max-width: 120px;
+    object-fit: contain;
+    padding-top: 5px;
+}
+
+.nav-links {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #E5E5E5;
+}
+
+.mobile-menu-btn {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+.mobile-menu-btn button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #8B1D1D;
+    border-top: 1px solid #A53939;
+    padding: 1rem 0;
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #A53939;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+    background-color: #A53939;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 300px;
+    background-image: url('https://via.placeholder.com/1200x300/8B1D1D/FFFFFF?text=Restaurant+Ambiance');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Description */
+.description-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .description-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.description-image {
+    position: relative;
+    height: 250px;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.description-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description-text p {
+    color: #374151;
+}
+
+/* Dishes Grid */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .dishes-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.dish-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-2px);
+}
+
+.dish-image {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.375rem;
+}
+
+.dish-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover .dish-image img {
+    transform: scale(1.05);
+}
+
+.dish-info {
+    margin-top: 0.75rem;
+}
+
+.dish-info h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.dish-info p {
+    font-size: 0.75rem;
+    color: #6B7280;
+    margin-top: 0.25rem;
+}
+
+.dish-price {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.dish-price span {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.dish-price svg {
+    margin-left: 0.25rem;
+    color: #9CA3AF;
+}
+
+/* Desserts Grid */
+.desserts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .desserts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .desserts-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.dessert-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dessert-card:hover {
+    transform: translateY(-2px);
+}
+
+.dessert-image {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.375rem;
+}
+
+.dessert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dessert-card:hover .dessert-image img {
+    transform: scale(1.05);
+}
+
+.dessert-info {
+    margin-top: 0.75rem;
+}
+
+.dessert-info h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.dessert-info p {
+    font-size: 0.75rem;
+    color: #6B7280;
+    margin-top: 0.25rem;
+}
+
+/* Wines Grid */
+.wines-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .wines-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .wines-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.wine-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.wine-card:hover {
+    transform: translateY(-2px);
+}
+
+.wine-image {
+    position: relative;
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.wine-image img {
+    width: 100px;
+    height: 280px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.wine-card:hover .wine-image img {
+    transform: scale(1.05);
+}
+
+.wine-info {
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+.wine-info h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.wine-info p {
+    font-size: 0.75rem;
+    color: #6B7280;
+    margin-top: 0.25rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #8B1D1D;
+    color: white;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+.footer-main {
+    grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+    .footer-main {
+        grid-column: span 2;
+    }
+}
+
+.footer-logo {
+    height: 40px;
+    width: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    font-size: 0.875rem;
+    color: #E5E5E5;
+    line-height: 1.5;
+}
+
+.contact-info p,
+.hours-info p {
+    font-size: 0.875rem;
+    color: #E5E5E5;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #A53939;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: #D1D5DB;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mt-3 {
+    margin-top: 0.75rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.pt-8 {
+    padding-top: 2rem;
+}
