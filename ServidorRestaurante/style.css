@@ -1,0 +1,384 @@
+body {
+    background-color: rgba(225, 221, 212, 1); 
+  }
+
+  .rodape img{
+    margin-top: 30%;
+    width: 100%;
+  }
+  
+.titulo {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: rgb(77, 2, 2);
+}
+
+header {
+  max-width: 100%; 
+  height: auto; 
+    top: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 1000;
+}
+  
+  
+.logo img {
+  width: 250px;
+  height: auto;
+   position: absolute;
+  left: 20px;
+  top: 10px;
+}
+  
+.menu-btn {
+  background-color: transparent;
+  color: rgb(77, 2, 2);
+  border: none;
+  font-size: 45px;
+  cursor: pointer;
+  position: fixed; 
+  top: 10px;
+  right: 40px;
+  z-index: 10; 
+}
+
+.menu-btn.scrolled {
+    color: white; 
+}
+
+.menu {
+  display: none;
+  position: fixed; 
+  top: 0;
+  right: 0;
+  padding: 70px;
+  background-color: rgb(77, 2, 2);
+  width: 200px; 
+  height: 700px; 
+  z-index: 999; 
+}
+
+.close-btn {
+  background-color: transparent;
+  border: #ffffff;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 55px;
+  cursor: pointer;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  font-size: 25px;
+  margin: 16px 0;
+  transition: border-bottom 0.3s;
+}
+  
+  
+.menu a:hover {
+  border-bottom: 2px solid white;
+}
+
+
+
+
+
+.Fundomesa{
+  width: 100%;
+  display: flex;
+  margin-top: 190px;
+  justify-content: center;
+  position: absolute;
+}
+
+img {
+  width: 80%;
+}
+
+.Mesa1, .Mesa2, .Mesa3, .Mesa4{
+ 
+}
+
+.Mesa1{
+  
+}
+
+.Mesa5, .Mesa6, .Mesa7, .Mesa8{
+  
+}
+
+.Mesa5{
+  
+}
+
+.Mesape1, .Mesape2 {
+  
+}
+
+.Mesape1{
+  
+}
+
+.Mesape3, .Mesape4 {
+  
+}
+
+.Mesape3 {
+  
+}
+
+.Mesadeitada1, .Mesadeitada2 {
+ 
+}
+
+.Mesadeitada3, .Mesadeitada4 {
+  
+}
+
+.Mesadeitada3{
+ 
+}
+
+
+
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.678);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: fixed;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;  
+}
+
+.close {
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  color: c;
+  font-size: 55px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.close:hover,
+.close:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.camposEntrar {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza no meio da tela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.CPF, .senha {
+  width: 480px;
+  height: 50px;
+  background-color: rgb(217, 217, 217);
+  border-radius: 20px;
+  z-index: 999;
+  padding: 0 15px;
+  margin-top: 1%;
+}
+
+input[type="text"], input[type="password"] {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #888888;
+  font-family: 'Arial', sans-serif; 
+  font-weight: 300;
+}
+
+.entrar {
+  width: 140px;
+  height: 40px;
+  background-color: rgb(77, 2, 2);
+  border-radius: 20px;
+  z-index: 999;
+  padding: 0 15px;
+  margin-top: 4%;
+  position: relative;
+}
+
+.cadastrar {
+  width: 180px;
+  height: 38px;
+  background-color: rgba(215, 211, 201);
+  border-radius: 20px;
+  z-index: 9999;
+  font-family: 'Lucida Sans', sans-serif;
+  color: #ffffff;
+  font-size: 23px;
+  margin-left: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  top: 60px; /* Move o botão um pouco para cima sem afetar os outros */
+}
+
+
+
+
+
+.camposEntrar h2 {
+
+  font-size: 26x;
+  color: #ffffff;
+  text-align: center; 
+  margin-top: 3%;
+  border-bottom: none; 
+}
+
+
+
+.camposEntrar a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  outline: none; /* Remove o contorno azul de foco */
+  box-shadow: none; /* Remove qualquer sombra */
+}
+
+
+.navBar a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.navBar h1 {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0 10px;  /* Espaçamento entre os h1s */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+.navBar {
+  display: flex;  /* Ativa o layout Flexbox */
+  justify-content: space-around;  /* Alinha os itens horizontalmente no centro */
+  align-items: center;  /* Alinha os itens verticalmente no centro */
+  height: 100px;  /* Ou o tamanho desejado para a altura da navBar */
+  background-color: rgb(77, 2, 2);
+  margin-top: -8px;
+}
+
+
+
+.data-reservas, .TClientes {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 4%;
+  color: rgb(77, 2, 2);
+  margin-top: 3%;
+}
+
+
+
+
+/* quadrados das  reservas*/
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%; /* Largura do contêiner */
+  margin-top: 30px; /* Espaçamento entre os quadrados e a seção anterior */
+  margin-left: 5%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 26px;
+}
+
+.grid:first-child {
+  width: 50%; /* Para os quadrados pequenos (grid à esquerda) */
+}
+
+.grid:last-child {
+  width: 50%; /* Para o quadrado grande (grid à direita) */
+  margin-left: 20%;  /* Adiciona um espaçamento maior entre o quadrado grande e os quadrados pequenos */
+}
+
+.quadrado {
+  width: 150px;   /* Aumenta o tamanho dos quadrados pequenos */
+  height: 150px;  /* Aumenta o tamanho dos quadrados pequenos */
+  background-color: rgba(197, 197, 197);
+  border-radius: 20px;
+}
+
+.grande {
+  width: 400px;   /* Aumenta o tamanho do quadrado grande */
+  height: 780px;  /* Aumenta o tamanho do quadrado grande */
+  background-color: rgba(197, 197, 197);
+  border-radius: 4%;
+  margin-left: 30px;  /* Adiciona espaçamento extra à esquerda para afastar do grid */
+}
+
+
+
+/* quadrados dos clientes*/
+
+
+.Clientes {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 20px;
+}
+
+.quadradoc {
+  width: 90%;   
+  height: 100px;  
+  background-color: rgba(197, 197, 197); 
+  margin-bottom: 13px; 
+}
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+

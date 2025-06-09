@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro</title>
+  <style>
+    .cadastro-page {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(77, 2, 2); 
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cadastro-page .container {
+      width: 700px;
+      background-color: #f5f5dc; 
+      padding: 40px;
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .cadastro-page .close-btn {
+      position: absolute;
+      top: -4px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 50px;
+      color: rgb(77, 2, 2);
+      cursor: pointer;
+    }
+
+    .cadastro-page .formulario {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cadastro-page .linha {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cadastro-page .input {
+      height: 50px;
+      border: none;
+      border-radius: 10px;
+      padding: 0 15px;
+      font-size: 18px;
+      background-color: #e6e6e6;
+      flex: 1;
+    }
+
+    .cadastro-page .metade {
+      width: 48%;
+    }
+
+    .cadastro-page .btn-cadastrar {
+      background-color: rgb(77, 2, 2);
+      color: white;
+      font-size: 19px;
+       font-family: 'Lucida Sans', sans-serif;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      width: 200px;
+      margin: 10px auto 0 auto; 
+      display: block;
+    }
+  </style>
+</head>
+<body class="cadastro-page">
+
+  <div class="container">
+    <button class="close-btn" onclick="window.location.href='reservaMesas.html'">×</button>
+
+
+    <form class="formulario">
+      <div class="linha">
+        <input type="text" placeholder="Nome" class="input metade"/>
+        <input type="text" placeholder="CPF/CNPJ" class="input metade"/>
+      </div>
+
+      <div class="linha">
+        <input type="tel" placeholder="Telefone" class="input metade"/>
+        <input type="tel" placeholder="Celular" class="input metade"/>
+      </div>
+
+      <div class="linha">
+        <input type="text" placeholder="Endereço" class="input"/>
+      </div>
+
+      <div class="linha">
+        <input type="email" placeholder="E-mail" class="input"/>
+      </div>
+
+      <button type="button" class="btn-cadastrar" onclick="window.location.href='reservasdoCliente.html'">CADASTRE-SE</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
+
+
