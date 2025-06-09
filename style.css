@@ -1,0 +1,775 @@
+@font-face {
+    font-family: 'Permatha Signature';
+    src: url(./fonts/Permatha\ Signature.otf);
+}
+
+
+
+
+/* ======= Estilos gerais ======= */
+body {
+
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ede9df;
+    /* Cor de fundo principal */
+}
+
+
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+
+header {
+    background-color: #ede9df;
+    padding: 10px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ccc;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* Logo levemente à direita */
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+header img {
+    max-width: 150px;
+    padding-top: 10px;
+}
+
+/* Navbar alinha à direita da logo */
+header nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-right: 40px;
+}
+
+header nav a {
+    position: relative;
+    /* necessário para o ::after */
+    text-decoration: none;
+    color: #640E0E;
+    font-weight: 500;
+    /* corrigido para um só */
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    transition: color 0.9s ease;
+    padding-bottom: 4px;
+    /* espaço para o underline */
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #640E0E;
+    /* mesma cor do texto */
+    transition: width 0.3s ease 0.06s;
+    /* duração 0.3s, delay 0.5s */
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* Começa invisível e acima da tela */
+#navbar {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Torna visível com transição suave */
+#navbar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.pagina-home .johnny img {
+    height: 700px;
+
+}
+
+
+
+/* ======= Navbar ======= */
+.navbar {
+    position: fixed;
+    /* Fixa no topo */
+    top: 0;
+    width: 100%;
+    background-color: #ede9df;
+    /* Mantém a cor de fundo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para destacar a navbar */
+    z-index: 4;
+    /* Garante que fique acima de outros elementos */
+}
+
+/* ======= Logo ======= */
+.content .logo img {
+    height: 100px;
+    width: 500px;
+
+}
+
+/* ======= Menu Responsivo ======= */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    /* Espaço entre os itens */
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5a1d0d;
+    /* Cor do texto */
+    font-weight: bold;
+}
+
+/* Botão de menu para dispositivos móveis */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ======= Layout principal da página ======= */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    /* Ocupa toda a altura da tela */
+    padding: 0px 5%;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+/* ======= Conteúdo textual ======= */
+.content {
+    max-width: 40%;
+    padding-bottom: 220px;
+}
+
+.content img {
+    width: 500px;
+}
+
+.content p {
+    font-size: 20px;
+    color: #333;
+    margin: 20px 0;
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+/* ======= Botões ======= */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.red {
+    background-color: #5a1d0d;
+    color: white;
+}
+
+.beige {
+    background-color: #bcb59a;
+    color: black;
+}
+
+/* ======= Container das imagens ======= */
+.image-container {
+    position: relative;
+    /* Define um contexto de posicionamento */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ======= Fundo vermelho (ajustado para ocupar a lateral direita) ======= */
+.fundo img {
+    width: 45%;
+    /* Reduz um pouco para melhor ajuste */
+    height: 100vh;
+    /* Ocupa toda a altura da tela */
+    position: absolute;
+    right: 0;
+    /* Cola no canto direito */
+    top: 10%;
+    /* Cola no topo */
+    z-index: 1;
+    /* Garante que fique atrás do prato */
+    padding-top: 0%;
+}
+
+/* ======= Segunda camada do fundo (para um efeito sobreposto) ======= */
+.home2 {
+    display: flex;
+    position: relative;
+    padding-top: 0;
+    /* Remove qualquer espaço extra */
+}
+
+
+.home2 .fundo2 img {
+    width: 60%;
+    height: 110%;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    /* Move completamente para o canto direito */
+    top: 50%;
+    /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta para um posicionamento mais preciso */
+    padding-top: 50px;
+}
+
+/* ======= Imagem do prato ======= */
+.image-container img {
+    position: absolute;
+    /* Para sobrepor corretamente */
+    width: 500px;
+    /* Ajuste do tamanho */
+    height: auto;
+    /* Mantém proporção */
+    border-radius: 50%;
+    /* Deixa a imagem circular */
+    z-index: 3;
+    /* Mantém sobreposta ao fundo */
+    right: 10%;
+    /* Ajusta um pouco para a esquerda */
+    top: 50%;
+    /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta melhor o posicionamento */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ======= Ajustes para telas menores (Responsividade) ======= */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Menu dropdown para dispositivos móveis */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #ede9df;
+        width: 150px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+.johnny {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: auto;
+    /* Ajuste conforme necessário */
+    height: 100%;
+    /* Para cobrir a altura total */
+    padding-bottom: 70px;
+}
+
+.johnny img {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    width: 750px;
+    height: 700px;
+    top: 0%;
+    padding-bottom: 700px;
+    margin-bottom: 80%;
+
+}
+
+.johnny2 {
+    width: 60%;
+    height: 90%;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    /* Move completamente para o canto direito */
+    top: 50%;
+    /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta para um posicionamento mais preciso */
+
+}
+
+.johnny2 img {
+    width: 480px;
+    height: 350px;
+    padding-bottom: 80px;
+}
+
+.johnny3 {
+    width: 47%;
+    height: 80%;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    /* Move completamente para o canto direito */
+    top: 45%;
+    /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta para um posicionamento mais preciso */
+}
+
+.johnny3 img {
+    width: 550px;
+    height: 550px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+
+.johnny3 img {
+    animation: fadeOut 2s;
+}
+
+@keyframes fadeOut {
+    from {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+.home-meio {
+    height: 694px;
+    z-index: 0;
+    background-image: url(img/macarrao.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 40px;
+
+}
+
+.home-meio background-image {
+    padding-top: 1000px;
+}
+
+
+.home-meio .texto-meio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 70px;
+    position: relative;
+    text-align: left;
+    margin-right: 75%;
+    padding: 30px;
+    background-color: rgba(230, 228, 228, 1);
+    border-radius: 20px;
+    width: 23%;
+    height: 70%;
+
+
+}
+
+.texto-meio h1 {
+    font-family: "Italiana", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.texto-meio p {
+    font-family: "Albert Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+
+
+.historia .container {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.historia .texto {
+    width: 80%;
+    padding: 0 60px;
+    padding-top: 80px;
+    justify-content: center;
+
+}
+
+.historia .texto h1 {
+    font-size: 60px;
+    font-family: 'Permatha Signature';
+    font-weight: 400;
+    text-align: center;
+    margin: 0%;
+    padding-right: 100px;
+}
+
+.historia .texto h2 {
+    font-size: 60px;
+    font-family: 'Permatha Signature';
+    font-weight: 400;
+    margin: 0%;
+    padding-left: 200px;
+    padding-bottom: 20px;
+    position: relative;
+    top: -30px;
+
+}
+
+.texto .titulo {
+    position: relative;
+    top: -50px;
+
+}
+
+
+
+.historia .texto p {
+    font-size: 20px;
+    font-family: "Albert Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    align-items: center;
+    position: relative;
+    top: -60px;
+    text-align: center;
+}
+
+.historia .img-meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza a imagem */
+}
+
+.historia .img-meio img {
+    width: 150%;
+    height: 400px;
+    margin: 5px auto;
+    /* Espaçamento e centralização */
+    padding: 10px;
+    border-radius: 10px;
+    /* Se quiser um efeito arredondado */
+}
+
+
+
+
+
+
+.nosso-espaco {
+    background-color: #640E0E;
+    margin: 0%;
+
+
+}
+
+.titulo-espaco h1 {
+    color: white;
+    font-family: "Aboreto", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 40px;
+}
+
+.titulo-espaco p {
+    color: white;
+    font-family: "Albert Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    font-size: 20px;
+    margin: 40px;
+}
+
+.nosso-espaco .imagem-espaco {
+    display: flex;
+
+
+}
+
+.imagem-espaco img {
+    width: 500px;
+    height: 350px;
+
+    position: relative;
+    top: -30px;
+}
+
+.carrossel {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    left: 50px;
+
+}
+
+.lista {
+    display: flex;
+    cursor: grab;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+
+}
+
+.lista img {
+    width: 50%;
+    height: 70%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    user-select: none;
+    scroll-snap-align: center;
+    margin: 20px;
+
+}
+
+
+
+/* Efeito de rolagem infinita */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.final .redes-sociais img {
+    margin: 0%;
+    gap: 0%;
+    z-index: 2;
+    padding-bottom: 40%;
+    left: 10%;
+    width: 1149px;
+    /* garante que vá até a borda direita */
+height: 300px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    /* ou absolute se for encaixado sobre outro */
+    display: flex;
+    align-items: center;
+}
+
+.final .redes-sociais h1{
+    padding-top: 80px;
+    left: 60px;
+    font-size: 35px;
+    color: black;
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+.redes-sociais {
+    position: relative;
+    display: inline-block;
+}
+
+.redes-sociais img {
+
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    left: 80%;
+
+}
+
+.redes-sociais h1 {
+    position: absolute;
+    top: 20px;
+    /* ajuste a posição vertical */
+    left: 20px;
+    /* ajuste a posição horizontal */
+    z-index: 2;
+    color: black;
+    font-size: 2rem;
+    font-family: "Albert Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin: 0;
+}
+
+
+.instagram {
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: center;       /* centraliza verticalmente */
+  flex-wrap: wrap;           /* para quebrar em telas menores */
+}
+
+.instagram img {
+  display: block;
+    filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.instagram img:hover {
+  filter: grayscale(0%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #d7d3c9;
+}
+
+.footer {
+    justify-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+    font-family: "Albert Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.footer p {
+    margin: 20px;
+}
+
+.footer-logo {
+    padding-top: 20px;
+    margin-left: 38%;
+}
