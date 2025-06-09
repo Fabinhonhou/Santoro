@@ -106,52 +106,70 @@ img {
 }
 
 .Mesa1, .Mesa2, .Mesa3, .Mesa4{
- 
+  width: 80px;
+  display: flex;
+  margin-top: 2%;
+  position: relative; 
+  left: 13%;
 }
 
 .Mesa1{
-  
+  margin-top: 12%;
 }
 
 .Mesa5, .Mesa6, .Mesa7, .Mesa8{
-  
+  width: 80px;
+  display: flex;
+  margin-top: 2%;
+  position: relative; 
+  left: 28%;
 }
 
 .Mesa5{
-  
+  margin-top: -48.8%;
 }
 
 .Mesape1, .Mesape2 {
-  
+  width: 80px;
+  display: flex;
+  position: relative;
+  left: 43%;
 }
 
 .Mesape1{
-  
+  margin-top: -48.8%;
 }
 
 .Mesape3, .Mesape4 {
-  
+  width: 80px;
+  display: flex;
+  position: relative;
+  left: 52%;
 }
 
 .Mesape3 {
-  
+  margin-top: -25.5%;
 }
 
 .Mesadeitada1, .Mesadeitada2 {
- 
+  width: 16%;
+  display: flex;
+  margin-top: 3%;
+  position: relative;
+  left: 60%;
 }
 
 .Mesadeitada3, .Mesadeitada4 {
-  
+  width: 16%;
+  display: flex;
+  margin-top: 3%;
+  position: relative;
+  left: 77%;
 }
 
 .Mesadeitada3{
- 
+  margin-top: -15%;
 }
-
-
-
-
 
 
 
