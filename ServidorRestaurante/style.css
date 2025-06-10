@@ -34,7 +34,8 @@ header {
   left: 20px;
   top: 10px;
 }
-  
+
+
 .menu-btn {
   background-color: transparent;
   color: rgb(77, 2, 2);
@@ -62,6 +63,12 @@ header {
   height: 700px; 
   z-index: 999; 
 }
+
+
+.menu.aberto {
+  display: block;
+}
+
 
 .close-btn {
   background-color: transparent;
@@ -213,6 +220,7 @@ img {
   display: flex;
   flex-direction: column;  
   align-items: center;  
+  margin-left: 69px;
 }
 
 .close {
@@ -289,7 +297,7 @@ input[type="text"], input[type="password"] {
   justify-content: center;
 
   position: relative;
-  top: 60px; /* Move o botão um pouco para cima sem afetar os outros */
+  top: 37px; /* Move o botão um pouco para cima sem afetar os outros */
 }
 
 

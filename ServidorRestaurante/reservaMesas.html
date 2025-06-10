@@ -216,4 +216,45 @@
 
 
 </body>
+
+<script>
+  // Pega o modal e seus elementos internos
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modal-image");
+  const closeBtn = document.getElementById("close");
+
+  // Função para abrir o modal com a imagem "Entrar.png"
+  function abrirModal() {
+    modal.style.display = "block";
+    modalImage.src = "imgs/Entrar.png";
+  }
+
+  // Fecha o modal ao clicar no "X"
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // Fecha o modal ao clicar fora da imagem
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  // Seleciona todas as mesas com base no data-image
+  const mesas = document.querySelectorAll('[data-image="imgs/Entrar.png"]');
+
+  // Adiciona o evento de clique a todas as mesas
+  mesas.forEach(mesa => {
+    mesa.addEventListener("click", abrirModal);
+  });
+
+
+  
+
+</script>
+
+<script src="script.js" defer></script>
+
+
 </html>
